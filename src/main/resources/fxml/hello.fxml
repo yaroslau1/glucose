@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" snapToPixel="false" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.work.controller.MainController">
+  <children>
+    <Pane prefHeight="550.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <SplitPane dividerPositions="0.45991983967935873" focusTraversable="true" layoutX="0.0" layoutY="0.0" prefHeight="550.0" prefWidth="1000.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <Pane prefHeight="548.0" prefWidth="496.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <TextArea fx:id="textArea" layoutX="22.0" layoutY="14.0" prefHeight="470.0" prefWidth="413.0" wrapText="true" />
+                    <Button fx:id="button" layoutX="22.0" layoutY="495.0" mnemonicParsing="false" onAction="#getData" text="Получить данные" />
+                    <Button fx:id="closeButton" layoutX="233.0" layoutY="495.0" mnemonicParsing="false" onAction="#close" text="Закрыть соединение" />
+                  </children>
+                </Pane>
+              </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <VBox disable="false" prefHeight="548.0" prefWidth="536.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <TableView fx:id="dataTable" editable="false" prefHeight="505.0" prefWidth="536.0000999999975">
+                      <columns>
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Дата" fx:id="dateColumn" />
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="106.0" text="Время" fx:id="timeColumn" />
+                        <TableColumn editable="false" prefWidth="75.0" text="Еда" fx:id="eatColumn" />
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Глюкоза" fx:id="glucoseColumn" />
+                        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="129.0" text="Гематокрит" fx:id="hctColumn" />
+                      </columns>
+                    </TableView>
+                    <Button fx:id="showSavedData" mnemonicParsing="false" onAction="#showSavedData" prefHeight="53.0" prefWidth="536.0" text="Показать все сохранённые данные" />
+                  </children>
+                </VBox>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
